@@ -27,92 +27,92 @@ kernel_module(){
 	echo -e "                  GeForce4 MX          ${GREEN}(96.43)${NC}\n"
 }
 
-nvidia_choice(){
-	read -p "Which Nvidia driver would you like to install (173_14/331_49/340_65/340_96/384_90)? " choice
-
-	case "$choice" in
-	  96_43 ) nvidia_96_43 ;;
-	  173_14 ) nvidia_173_14 ;;	
-	  331_49 ) nvidia_331_49 ;;
-	  340_65 ) nvidia_340_65 ;;
-	  340_96 ) nvidia_340_96 ;;
-	  384_90 ) nvidia_384_90 ;;
-	  *   ) echo -e "${RED}Invalid Choice${NC}"; nvidia_choice ;;
-	esac
-}
-
-nvidia_96_43(){
-	if [ -f "/home/itg/drivers/NVIDIA-Linux-x86-96.43.23-pkg1.run" ]
-	then
-		echo "Installing NVIDIA-Linux-x86-96.43.23-pkg1.run";
-		/home/itg/drivers/NVIDIA-Linux-x86-96.43.23-pkg1.run -a -X -q
-	else
-		echo "Downloading NVIDIA Driver";
-		wget "http://us.download.nvidia.com/XFree86/Linux-x86/96.43.23/NVIDIA-Linux-x86-96.43.23-pkg1.run" -P $HOME/;
-		sh $HOME/NVIDIA-Linux-x86-96.43.23-pkg1.run -a -X -q
-	fi
-}
-
-nvidia_173_14(){
-	if [ -f "/home/itg/drivers/NVIDIA-Linux-x86-173.14.39-pkg1.run" ]
-	then
-		echo "Installing NVIDIA-Linux-x86-173.14.39-pkg1.run";
-		/home/itg/drivers/NVIDIA-Linux-x86-173.14.39-pkg1.run -a -X -q
-	else
-		echo "Downloading NVIDIA Driver";
-		wget "http://us.download.nvidia.com/XFree86/Linux-x86/173.14.39/NVIDIA-Linux-x86-173.14.39-pkg1.run" -P $HOME/;
-        	sh $HOME/NVIDIA-Linux-x86-173.14.39-pkg1.run -a -X -q
-	fi
-}
-
-nvidia_331_49(){
-	if [ -f "/home/itg/drivers/NVIDIA-Linux-x86_64-331.49.run" ]
-	then
-		echo "Installing NVIDIA-Linux-x86_64-331.49.run";
-		/home/itg/drivers/NVIDIA-Linux-x86_64-331.49.run -a -X -q
-	else
-		echo "Downloading NVIDIA Driver";
-		wget "http://us.download.nvidia.com/XFree86/Linux-x86_64/331.49/NVIDIA-Linux-x86_64-331.49.run" -P $HOME/;	
-		sh $HOME/NVIDIA-Linux-x86_64-331.49.run -a -X -q
-	fi
-}
-
-nvidia_340_65(){
-
-        if [ -f "/home/itg/drivers/NVIDIA-Linux-x86_64-340.65.run" ]
-        then
-		echo "Installing NVIDIA-Linux-x86_64-340.65.run";
-		/home/itg/drivers/NVIDIA-Linux-x86_64-340.65.run -a -X -q
-	else
-		echo "Downloading NVIDIA Driver then intalling";
-		wget "http://us.download.nvidia.com/XFree86/Linux-x86_64/340.65/NVIDIA-Linux-x86_64-340.65.run" -P $HOME/;
-		sh $HOME/NVIDIA-Linux-x86_64-340.65.run -a -X -q
-	fi
-}
-
-nvidia_340_96(){
-	if [ -f "/home/itg/drivers/NVIDIA-Linux-x86_64-340.96.run" ]
-	then
-		echo "Installing NVIDIA-Linux-x86_64-340.96.run";
-		/home/itg/drivers/NVIDIA-Linux-x86_64-340.96.run -a -X -q
-	else
-		echo "Downloading NVIDIA Driver then installing";
-		wget "http://us.download.nvidia.com/XFree86/Linux-x86_64/340.96/NVIDIA-Linux-x86_64-340.96.run" -P $HOME/;
-		sh $HOME/NVIDIA-Linux-x86_64-340.96.run -a -X -q
-	fi
-}
-
-nvidia_384_90(){
-	if [ -f "/home/itg/drivers/NVIDIA-Linux-x86_64-384.90.run" ]
-	then
-		echo "Installing NVIDIA-Linux-x86_64-384.90.run";
-		/home/itg/drivers/NVIDIA-Linux-x86_64-384.90.run -a -X -q
-	else
-		echo "Downloading NVIDIA Driver then installing";
-		wget "http://us.download.nvidia.com/XFree86/Linux-x86_64/384.90/NVIDIA-Linux-x86_64-384.90.run" -P $HOME/;
-		sh $HOME/NVIDIA-Linux-x86_64-384.90.run -a -X -q
-	fi
-}
+#nvidia_choice(){
+#	read -p "Which Nvidia driver would you like to install (173_14/331_49/340_65/340_96/384_90)? " choice
+#
+#	case "$choice" in
+#	  96_43 ) nvidia_96_43 ;;
+#	  173_14 ) nvidia_173_14 ;;	
+#	  331_49 ) nvidia_331_49 ;;
+#	  340_65 ) nvidia_340_65 ;;
+#	  340_96 ) nvidia_340_96 ;;
+#	  384_90 ) nvidia_384_90 ;;
+#	  *   ) echo -e "${RED}Invalid Choice${NC}"; nvidia_choice ;;
+#	esac
+#}
+#
+#nvidia_96_43(){
+#	if [ -f "/home/itg/drivers/NVIDIA-Linux-x86-96.43.23-pkg1.run" ]
+#	then
+#		echo "Installing NVIDIA-Linux-x86-96.43.23-pkg1.run";
+#		/home/itg/drivers/NVIDIA-Linux-x86-96.43.23-pkg1.run -a -X -q
+#	else
+#		echo "Downloading NVIDIA Driver";
+#		wget "http://us.download.nvidia.com/XFree86/Linux-x86/96.43.23/NVIDIA-Linux-x86-96.43.23-pkg1.run" -P $HOME/;
+#		sh $HOME/NVIDIA-Linux-x86-96.43.23-pkg1.run -a -X -q
+#	fi
+#}
+#
+#nvidia_173_14(){
+#	if [ -f "/home/itg/drivers/NVIDIA-Linux-x86-173.14.39-pkg1.run" ]
+#	then
+#		echo "Installing NVIDIA-Linux-x86-173.14.39-pkg1.run";
+#		/home/itg/drivers/NVIDIA-Linux-x86-173.14.39-pkg1.run -a -X -q
+#	else
+#		echo "Downloading NVIDIA Driver";
+#		wget "http://us.download.nvidia.com/XFree86/Linux-x86/173.14.39/NVIDIA-Linux-x86-173.14.39-pkg1.run" -P $HOME/;
+#       	sh $HOME/NVIDIA-Linux-x86-173.14.39-pkg1.run -a -X -q
+#	fi
+#}
+#
+#nvidia_331_49(){
+#	if [ -f "/home/itg/drivers/NVIDIA-Linux-x86_64-331.49.run" ]
+#	then
+#		echo "Installing NVIDIA-Linux-x86_64-331.49.run";
+#		/home/itg/drivers/NVIDIA-Linux-x86_64-331.49.run -a -X -q
+#	else
+#		echo "Downloading NVIDIA Driver";
+#		wget "http://us.download.nvidia.com/XFree86/Linux-x86_64/331.49/NVIDIA-Linux-x86_64-331.49.run" -P $HOME/;	
+#		sh $HOME/NVIDIA-Linux-x86_64-331.49.run -a -X -q
+#	fi
+#}
+#
+#nvidia_340_65(){
+#
+#        if [ -f "/home/itg/drivers/NVIDIA-Linux-x86_64-340.65.run" ]
+#        then
+#		echo "Installing NVIDIA-Linux-x86_64-340.65.run";
+#		/home/itg/drivers/NVIDIA-Linux-x86_64-340.65.run -a -X -q
+#	else
+#		echo "Downloading NVIDIA Driver then intalling";
+#		wget "http://us.download.nvidia.com/XFree86/Linux-x86_64/340.65/NVIDIA-Linux-x86_64-340.65.run" -P $HOME/;
+#		sh $HOME/NVIDIA-Linux-x86_64-340.65.run -a -X -q
+#	fi
+#}
+#
+#nvidia_340_96(){
+#	if [ -f "/home/itg/drivers/NVIDIA-Linux-x86_64-340.96.run" ]
+#	then
+#		echo "Installing NVIDIA-Linux-x86_64-340.96.run";
+#		/home/itg/drivers/NVIDIA-Linux-x86_64-340.96.run -a -X -q
+#	else
+#		echo "Downloading NVIDIA Driver then installing";
+#		wget "http://us.download.nvidia.com/XFree86/Linux-x86_64/340.96/NVIDIA-Linux-x86_64-340.96.run" -P $HOME/;
+#		sh $HOME/NVIDIA-Linux-x86_64-340.96.run -a -X -q
+#	fi
+#}
+#
+#nvidia_384_90(){
+#	if [ -f "/home/itg/drivers/NVIDIA-Linux-x86_64-384.90.run" ]
+#	then
+#		echo "Installing NVIDIA-Linux-x86_64-384.90.run";
+#		/home/itg/drivers/NVIDIA-Linux-x86_64-384.90.run -a -X -q
+#	else
+#		echo "Downloading NVIDIA Driver then installing";
+#		wget "http://us.download.nvidia.com/XFree86/Linux-x86_64/384.90/NVIDIA-Linux-x86_64-384.90.run" -P $HOME/;
+#		sh $HOME/NVIDIA-Linux-x86_64-384.90.run -a -X -q
+#	fi
+#}
 
 stats_setup(){
 	if [ ! -d "/stats" ]; then
