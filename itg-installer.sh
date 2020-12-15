@@ -247,7 +247,7 @@ echo -e "${GREEN}In The Groove 2 - Arcade Installer\n${NC}";
 internet_check
 install_packages
 kernel_module
-nvidia_choice
+#nvidia_choice
 stats_setup
 itgdata_setup
 flashdrive_setup
