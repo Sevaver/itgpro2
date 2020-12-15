@@ -72,7 +72,7 @@ The iso has had a couple issues where it would not work correctly when installin
 1. Install Git `sudo apt-get install git`
 1. Blacklist the nouveau driver `echo "blacklist nouveau"  | sudo tee -a /etc/modprobe.d/blacklist.conf`
 1. Reboot `sudo reboot`
-1. When started back up, Clone the repo, `git clone https://github.com/concubidated/itgpro2` and change directory to itgpro2, `cd itgpro2`
+1. When started back up, Clone the repo, `git clone https://github.com/Sevaver/itgpro2` and change directory to itgpro2, `cd itgpro2`
 1. Run the installer script `sudo ./itg-installer.sh`
     * When asked what NVIDIA driver to install, start with 331_49 if using a 9000 series card or older.
     * If you are using the STOCK ITG2 hardware, choose the NVIDIA driver 173_14.
